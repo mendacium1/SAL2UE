@@ -108,6 +108,20 @@ depth_first_search(rooted_example_tree, 10)
 
 # 1 c.) File I/O
 def read_rooted_tree(filepath):
+    """
+    Read a file containing a rooted tree and convert it into a list representation.
+
+    Args:
+        filepath (str): The path to the file containing the rooted tree.
+
+    Returns:
+        list: A list representing the rooted tree structure. Each index corresponds
+              to a node, and the value at that index is a list of its neighboring nodes.
+
+    Example:
+        filename = "rooted_tree.txt"
+        rooted_tree_from_file = read_rooted_tree(filename)
+    """
     rooted_tree = []
     with open(filepath, 'r') as file:
         for line in file:
@@ -119,9 +133,12 @@ def read_rooted_tree(filepath):
     return rooted_tree
 
 
+# Test with breadth_first_search/depth_first_search:
 filename = "rooted_tree.txt"
 rooted_tree_from_file = read_rooted_tree(filename)
+
 print("\nrooted_tree_from_file - breadth_first_search:")
 breadth_first_search(rooted_tree_from_file, 30)
+
 print("\nrooted_tree_from_file - depth_first_search:")
 depth_first_search(rooted_tree_from_file, 30)
