@@ -1,0 +1,14 @@
+a.)
+Die Funktion analyze_text, hat eine Laufzeitkomplexität von O(n), da die linearen Schleifen am längsten brauchen.
+
+b.)
+Die Funktion print_text, hat eine Laufzeitkomplexität von O(1), da die schleife eine konstante länge hat und die print Anweisung ebenfalls eine konstante Anzahl an Zeichen ausgibt.
+
+c.)
+Die Funktion calculate_fib, hat eine Laufzeitkomplexität von O(2^n), da jeder Aufruf der Funktion zwei weitere Aufrufe generiert.
+
+d.)
+Die Funktion check_for_duplicates, hat eine Laufzeitkomplexität von O(n^2), da die Schleifen jeweils n-mal aufgerufen werden und die if-Kondition n^2 mal augeführt werden kann.
+
+e.)
+Die Funktion print_countdown, hat eine Laufzeitkomplexität von O(n), wobei n minutes_to_midnight ist, da die Schleife so oft ausgeführt wird. Zu beachten ist, dass sich die Laufzeit durch den sleep-Aufruf verändern kann.
