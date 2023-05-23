@@ -20,13 +20,16 @@ rooted_tree = [
 # 1 a.) breadth_first_search
 def breadth_first_search(rooted_tree, target_node):
     """
-    Perform breadth-first search on a rooted tree and print every visited node, highlighting the target node.
+    Perform breadth-first search on a rooted tree and print every visited node, highlighting the
+    target node.
 
     Args:
         rooted_tree (list): A list representing the rooted tree structure.
-            Each element of the list represents a node, and the value of each element is a list of its neighbors.
+            Each element of the list represents a node, and the value of each element is a list of
+            its neighbors.
             The index of each element corresponds to the node's unique identifier.
-        target_node (int): The identifier of the target node to be highlighted in the printed output.
+        target_node (int): The identifier of the target node to be highlighted in the printed
+        output.
 
     Returns:
         None
@@ -52,3 +55,4 @@ def breadth_first_search(rooted_tree, target_node):
 
 
 breadth_first_search(rooted_tree, 10)
+
