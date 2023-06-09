@@ -1,16 +1,15 @@
 import re
 
 attacker_numbers = set()
+attacker_phone_number_regex = re.compile(r'^0\d{4,5}(?:[\/]{1,3}|\.)\d\d[1|4]\d{5,7}')
 
 with open("call_log.txt", "r", encoding="utf-8") as call_log:
     for line in call_log:
-        match = re.search(r'', line)
+        match = re.search(attacker_phone_number_regex, line)
+        print(match)
         if match:
             print(f"matched: {line}")
-            area_code = match.group(1)
-            number = match.group(2)
-            formatted_number = f"{area_code}/{number}"
-            attacker_numbers.add(formatted_number)
+            attacker_numbers.add(match)
         else:
              print(f"no-match: {line}")
 
