@@ -1,6 +1,6 @@
 """Exercise sheet 4
 
-This python program reads in telephone numbers from a log-file called "call_log.txt". It than filters out numbers from "attackers" by a given ruleset using a regex.
+This python program reads in telephone numbers from a log-file called "call_log.txt". It than filters out numbers from "attackers" by a given ruleset using a regex. The attack numbers are then written into the file "attacker_numbers.txt".
 """
 import re
 
@@ -24,8 +24,8 @@ with open("call_log.txt", "r", encoding="utf-8") as call_log:
             # Add the formatted number to the set of attacker numbers
             attacker_numbers.add(formatted_number)
 
-# Open a file to write the filtered numbers
-with open("filtered_numbers.txt", "w", encoding="utf-8") as output_file:
+# Open a file to write the attacker numbers
+with open("attacker_numbers.txt", "w", encoding="utf-8") as output_file:
     # Write each attacker number to the file (should be 1863 numbers)
     for number in attacker_numbers:
         output_file.write(number + "\n")
